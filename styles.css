@@ -8,6 +8,17 @@
   --rojoDetalles: #ff6666;
   --rojoMain: #990000;
   --negro: #161616;
+  --html: #e44d26;
+  --css: #2965f1;
+  --sass: #c56394;
+  --boot: #7611f6;
+  --js: #f0db4f;
+  --php: #777bb3;
+  --react: #149eca;
+  --git: #f05033;
+  --gith: #ffff;
+  --figma: #0acf83;
+  --photoshop: #2586ce;
 }
 #primero {
   max-width: 100vw;
@@ -256,4 +267,94 @@
 #proyectos #carouselExampleFade .card .imagen:hover .overlay {
   display: flex;
   pointer-events: inherit;
+}
+
+/* Habilidades Estilos */
+#habilidades {
+  max-width: 100vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(assets/media/BackNegro.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#habilidades h3 {
+  color: white;
+  font-size: 2.5rem;
+  width: 80%;
+}
+#habilidades .container {
+  width: 85%;
+  height: 85%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#habilidades .container .hab {
+  background-color: black;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5px;
+}
+#habilidades .container .hab img {
+  max-width: 100%;
+  max-height: 65%;
+  object-fit: contain;
+}
+#habilidades .container .hab p {
+  color: wheat;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+}
+#habilidades .container .hab .html {
+  color: var(--html);
+}
+#habilidades .container .hab .css {
+  color: var(--css);
+}
+#habilidades .container .hab .sass {
+  color: var(--sass);
+}
+#habilidades .container .hab .js {
+  color: var(--js);
+  font-size: 1.2rem;
+}
+#habilidades .container .hab .boot {
+  color: var(--boot);
+  font-size: 1.2rem;
+}
+#habilidades .container .hab .php {
+  color: var(--php);
+}
+#habilidades .container .hab .react {
+  color: var(--react);
+}
+
+#habilidades .container .hab .git {
+  color: var(--git);
+}
+
+#habilidades .container .hab .github {
+  color: var(--gith);
+}
+
+#habilidades .container .hab .figma {
+  color: var(--figma);
+}
+
+#habilidades .container .hab .photo {
+  color: var(--photoshop);
+  font-size: 1rem;
 }
