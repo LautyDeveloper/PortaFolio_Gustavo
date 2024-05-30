@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --rojoTitulo: #cc3333;
+  --rojoDetalles: #ff6666;
+  --rojoMain: #990000;
+  --negro: #161616;
+}
+#primero {
+  max-width: 100vw;
+  height: 100vh;
+  background-image: url("assets/media/BackNegro.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* Estilos Header */
+#primero header {
+  max-width: 100vw;
+  height: 8%;
+}
+#primero header nav .nombre {
+  color: var(--rojoTitulo);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+#primero header nav .offcanvas {
+  width: 70%;
+}
+#primero header nav .offcanvas-header {
+  background-color: black;
+}
+#primero header nav .offcanvas-header .offcanvas-title {
+  color: var(--rojoMain);
+  font-size: 2rem;
+}
+
+#primero header nav .offcanvas-body {
+  background-color: black;
+}
+#primero header nav .offcanvas-body .navbar-nav .nav-item .nav-link {
+  color: var(--rojoDetalles);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+#primero header nav .offcanvas-body .navbar-nav .dropdown .dropdown-menu {
+  background-color: var(--negro);
+}
+#primero
+  header
+  nav
+  .offcanvas-body
+  .navbar-nav
+  .dropdown
+  .dropdown-menu
+  .dropdown-item {
+  color: var(--rojoDetalles);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Estilos Presentacion */
+#primero .hero {
+  width: 100%;
+  height: 92%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+#primero .hero .imagen {
+  width: 90%;
+  height: 45.4%;
+  border-radius: 50%;
+  background-color: var(--rojoMain);
+}
+#primero .hero .informacion {
+  height: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#primero .hero .informacion .texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+#primero .hero .informacion .texto h1 {
+  color: white;
+  font-size: 3.3rem;
+  font-weight: 700;
+}
+#primero .hero .informacion .texto h2 {
+  font-size: 2.1rem;
+  color: var(--rojoMain);
+  font-weight: 700;
+}
+#primero .hero .informacion .texto p {
+  font-size: 1.5rem;
+  width: 80%;
+  font-weight: 700;
+}
+#primero .hero .informacion .redes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 20%;
+}
+#primero .hero .informacion .redes .red {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: var(--rojoTitulo);
+}
+#primero .hero .informacion .botones {
+  width: 90%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#primero .hero .informacion .botones button {
+  height: 100%;
+  width: 45%;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+#primero .hero .informacion .botones .btn-1 {
+  background-color: var(--rojoMain);
+  border: none;
+  outline: none;
+  color: white;
+}
+#primero .hero .informacion .botones .btn-1:hover {
+  background-color: transparent;
+  border: 3px solid var(--rojoMain);
+  color: var(--rojoMain);
+}
+#primero .hero .informacion .botones .btn-2 {
+  background-color: transparent;
+  border: 3px solid var(--rojoMain);
+  color: var(--rojoMain);
+}
+#primero .hero .informacion .botones .btn-2:hover {
+  background-color: var(--rojoMain);
+  border: none;
+  outline: none;
+  color: white;
+}
+
+/* Estilos Proyectos */
