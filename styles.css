@@ -2,7 +2,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
+
 :root {
   --rojoTitulo: #cc3333;
   --rojoDetalles: #ff6666;
@@ -10,6 +12,7 @@
   --rojoBoton: #ff0000;
   --rojoFondoInput: #4f0000;
   --rojoBordeInput: #bf0404;
+  --rojoBackRojo: #ff0000;
   --negro: #161616;
   --html: #e44d26;
   --css: #2965f1;
@@ -38,6 +41,10 @@
 #primero header {
   max-width: 100vw;
   height: 8%;
+  background: black;
+}
+#primero header nav {
+  background-color: black;
 }
 #primero header nav .nombre {
   color: var(--rojoTitulo);
@@ -97,6 +104,13 @@
   height: 45.4%;
   border-radius: 50%;
   background-color: var(--rojoMain);
+  display: grid;
+  place-items: center;
+}
+#primero .hero .imagen img {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
 }
 #primero .hero .informacion {
   height: 55%;
@@ -138,7 +152,7 @@
   height: 70px;
   width: 70px;
   border-radius: 50%;
-  background-color: var(--rojoTitulo);
+  background-color: var(--rojoMain);
   display: grid;
   place-items: center;
 }
@@ -160,10 +174,16 @@
   font-size: 1.4rem;
   font-weight: 700;
 }
+#primero .hero .informacion .botones button a {
+  text-decoration: none;
+}
 #primero .hero .informacion .botones .btn-1 {
   background-color: var(--rojoMain);
   border: none;
   outline: none;
+  color: white;
+}
+#primero .hero .informacion .botones .btn-1 a {
   color: white;
 }
 #primero .hero .informacion .botones .btn-1:hover {
@@ -171,9 +191,15 @@
   border: 3px solid var(--rojoMain);
   color: var(--rojoMain);
 }
+#primero .hero .informacion .botones .btn-1:hover a {
+  color: var(--rojoMain);
+}
 #primero .hero .informacion .botones .btn-2 {
   background-color: transparent;
   border: 3px solid var(--rojoMain);
+  color: var(--rojoMain);
+}
+#primero .hero .informacion .botones .btn-2 a {
   color: var(--rojoMain);
 }
 #primero .hero .informacion .botones .btn-2:hover {
@@ -181,6 +207,49 @@
   border: none;
   outline: none;
   color: white;
+}
+#primero .hero .informacion .botones .btn-2:hover a {
+  color: white;
+}
+
+/* Estilos Sobre mi */
+#sobremi {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 20px;
+  align-items: center;
+  background-image: url(assets/media/BackNegro.png);
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+}
+
+#sobremi .container {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#sobremi h1 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+#sobremi .rojo {
+  color: var(--rojoMain);
+}
+
+#sobremi .texto {
+  display: none;
+}
+
+#sobremi video {
+  width: 100%;
+  height: 100%;
 }
 
 /* Estilos Proyectos */
@@ -196,6 +265,14 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+#proyectos h2 {
+  color: white;
+  font-size: 2rem;
+  padding: 20px 0 10px 0;
+}
+#proyectos .rojo {
+  color: var(--rojoBackRojo);
 }
 #proyectos #projects {
   display: none;
@@ -259,7 +336,6 @@
 #proyectos #carouselExampleFade .card .imagen {
   width: 100%;
   height: 200px;
-  background-color: rebeccapurple;
 }
 #proyectos #carouselExampleFade .card .imagen img {
   width: 100%;
@@ -303,6 +379,9 @@
   color: white;
   font-size: 2.5rem;
   width: 80%;
+}
+#habilidades .rojo {
+  color: var(--rojoMain);
 }
 #habilidades .container {
   width: 85%;
@@ -527,9 +606,10 @@ footer .links ul {
   list-style: none;
   place-items: center;
   text-align: center;
+  padding: 0;
 }
 footer .links ul li a {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: var(--rojoMain);
   text-decoration: none;
 }
@@ -603,6 +683,60 @@ footer .links ul li a:hover {
   #primero .hero .informacion .redes .red:hover {
     transform: scale(1.1);
   }
+  #sobremi {
+    height: 90vh;
+  }
+  #sobremi .container {
+    flex-direction: row;
+    justify-content: space-around;
+    height: 90%;
+  }
+  #sobremi .container .texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: white;
+    width: 55%;
+    height: 90%;
+  }
+  #sobremi .container .texto p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    width: 85%;
+  }
+  #sobremi .container .texto .intereses {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #sobremi .container .texto .intereses .container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #sobremi .container .texto .intereses .interes {
+    background-color: var(--rojoMain);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+  }
+  #sobremi .container .texto .intereses .interes img {
+    width: 50px;
+  }
+  #sobremi .container .texto .intereses .interes p {
+    margin: 0;
+  }
+  #sobremi .container video {
+    width: 40%;
+    height: 100%;
+  }
   #contacto {
     flex-direction: row;
     justify-content: space-around;
@@ -621,6 +755,9 @@ footer .links ul li a:hover {
     color: white;
     font-size: 2rem;
     font-weight: 700;
+  }
+  #contacto .informacion .rojo {
+    color: var(--rojoBackRojo);
   }
   #contacto .informacion .parrafo-princ {
     color: white;
