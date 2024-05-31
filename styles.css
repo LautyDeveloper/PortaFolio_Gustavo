@@ -23,6 +23,9 @@
   --figma: #0acf83;
   --photoshop: #2586ce;
 }
+.btn-close {
+  font-size: 2rem;
+}
 #primero {
   max-width: 100vw;
   height: 100vh;
@@ -136,6 +139,13 @@
   width: 70px;
   border-radius: 50%;
   background-color: var(--rojoTitulo);
+  display: grid;
+  place-items: center;
+}
+#primero .hero .informacion .redes .red img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
 }
 #primero .hero .informacion .botones {
   width: 90%;
@@ -187,7 +197,10 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-
+#proyectos #projects {
+  display: none;
+  pointer-events: none;
+}
 #proyectos #carouselExampleFade {
   width: 100%;
   height: 90%;
@@ -321,6 +334,9 @@
   font-weight: 700;
   margin: 0;
 }
+#habilidades .container .hab .texto .second {
+  display: none;
+}
 #habilidades .container .hab .html {
   color: var(--html);
 }
@@ -384,6 +400,10 @@
   justify-content: center;
   align-items: center;
 }
+#contacto .informacion {
+  display: none;
+  pointer-events: none;
+}
 #contacto form div {
   width: 85%;
   height: 13%;
@@ -427,6 +447,7 @@
   padding: 0 0 0 10px;
   font-size: 1.3rem;
   font-weight: 600;
+  resize: none;
 }
 #contacto form .textarea textarea::placeholder {
   color: white;
@@ -441,4 +462,340 @@
   color: white;
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+footer {
+  background-color: var(--negro);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 50vh;
+}
+
+footer .arriba {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 40%;
+}
+footer .arriba h5 {
+  color: var(--rojoTitulo);
+  font-size: 3rem;
+  border-bottom: 3px solid red;
+  padding-bottom: 10px;
+}
+footer .arriba .redes {
+  width: 80%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .arriba .redes .red {
+  width: 50px;
+  height: 50px;
+  background-color: var(--rojoTitulo);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: all 0.3s ease;
+}
+footer .arriba .redes .red:hover {
+  transform: scale(1.1);
+}
+
+footer .arriba .redes .red img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+footer .links {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+footer .links ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  list-style: none;
+  place-items: center;
+  text-align: center;
+}
+footer .links ul li a {
+  font-size: 1.5rem;
+  color: var(--rojoMain);
+  text-decoration: none;
+}
+footer .links ul li a:hover {
+  color: #ff0000;
+}
+
+@media (min-width: 770px) {
+  #primero header nav .offcanvas-body .navbar-nav .nav-item .nav-link:hover {
+    color: var(--rojoMain);
+  }
+  #primero header nav .offcanvas {
+    width: 40%;
+  }
+  #primero
+    header
+    nav
+    .offcanvas-body
+    .navbar-nav
+    .dropdown
+    .dropdown-menu
+    .dropdown-item:hover {
+    background-color: #232323;
+    color: var(--rojoMain);
+  }
+  #primero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #primero .hero {
+    flex-direction: row-reverse;
+    width: 90%;
+  }
+  #primero .hero .imagen {
+    width: 550px;
+    height: 550px;
+  }
+  #primero .hero .informacion {
+    height: 490px;
+    width: 50%;
+    align-items: flex-start;
+  }
+  #primero .hero .informacion .texto {
+    height: 60%;
+    width: 100%;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: start;
+  }
+  #primero .hero .informacion .texto h1 {
+    letter-spacing: 6px;
+    font-size: 4rem;
+  }
+  #primero .hero .informacion .texto h2 {
+    letter-spacing: 3px;
+    font-size: 2.5rem;
+  }
+  #primero .hero .informacion .texto p {
+    font-size: 1.8rem;
+    width: 70%;
+  }
+  #primero .hero .informacion .redes {
+    width: 60%;
+  }
+  #primero .hero .informacion .redes .red {
+    width: 60px;
+    height: 60px;
+    transition: all ease 0.2s;
+  }
+  #primero .hero .informacion .redes .red:hover {
+    transform: scale(1.1);
+  }
+  #contacto {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #contacto form {
+    width: 45%;
+  }
+  #contacto .informacion {
+    display: flex;
+    pointer-events: inherit;
+    flex-direction: column;
+    width: 55%;
+  }
+  #contacto .informacion h4 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  #contacto .informacion .parrafo-princ {
+    color: white;
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  #contacto .informacion .data {
+    width: 60%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #contacto .informacion .data .dato {
+    height: 25%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    background-color: var(--negro);
+    border-radius: 50px;
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.522);
+  }
+  #contacto .informacion .data .dato .texto {
+    width: 75%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+  #contacto .informacion .data .dato .texto p {
+    margin: 0;
+    color: var(--rojoMain);
+    font-weight: 600;
+  }
+  #contacto .informacion .data .dato .texto .principal {
+    color: white;
+    font-size: 1.5rem;
+  }
+  #habilidades {
+    height: 65vh;
+    padding: 40px;
+  }
+  #habilidades .container {
+    width: 90%;
+  }
+  #habilidades .container .hab {
+    width: 300px;
+    height: 70px;
+    flex-direction: row;
+  }
+
+  #habilidades .container .hab img {
+    width: 30%;
+    height: 100%;
+  }
+
+  #habilidades .container .hab .texto {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  #habilidades .container .hab .texto .second {
+    display: block;
+    font-size: 0.7rem;
+    color: whitesmoke;
+  }
+  footer {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  footer .arriba {
+    width: 40%;
+    height: 50%;
+  }
+  footer .links {
+    width: 50%;
+  }
+  footer .links ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #proyectos {
+    height: auto;
+  }
+
+  #proyectos #carouselExampleFade {
+    display: none;
+    pointer-events: none;
+  }
+  #proyectos #projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    gap: 20px;
+    padding-bottom: 30px;
+  }
+  #proyectos #projects .col {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+  }
+  #proyectos #projects .card {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    color: white;
+  }
+  #proyectos #projects .card .card-body {
+    padding: 5px 0 0 0;
+  }
+  #proyectos #projects .card .card-body .card-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--rojoMain);
+  }
+  #proyectos #projects .card .card-body p {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+  #proyectos #projects .card .card-body .card-text {
+    font-size: 1.2rem;
+  }
+  #proyectos #projects .card .card-footer {
+    display: grid;
+    place-items: center;
+  }
+  #proyectos #projects .card .card-footer .lenguajes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  #proyectos #projects .card .card-footer .lenguajes .lenguaje {
+    width: 35px;
+    height: 35px;
+    margin: 5%;
+  }
+  #proyectos #projects .card .card-footer .lenguajes .lenguaje img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  #proyectos #projects .card .imagen {
+    width: 100%;
+    height: 200px;
+  }
+  #proyectos #projects .card .imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #proyectos #projects .card .imagen .overlay {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: -100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    display: none;
+    pointer-events: none;
+  }
+  #proyectos #projects .card .imagen:hover .overlay {
+    display: flex;
+    pointer-events: inherit;
+  }
 }
