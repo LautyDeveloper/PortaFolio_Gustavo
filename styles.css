@@ -100,8 +100,8 @@
 }
 
 #primero .hero .imagen {
-  width: 90%;
-  height: 45.4%;
+  width: 350px;
+  min-height: 350px;
   border-radius: 50%;
   background-color: var(--rojoMain);
   display: grid;
@@ -932,7 +932,8 @@ footer .links ul li a:hover {
     pointer-events: none;
   }
   #proyectos #projects .card .imagen:hover .overlay {
-    display: flex;
+    display: block;
     pointer-events: inherit;
+    z-index: 10;
   }
 }
