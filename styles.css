@@ -100,23 +100,19 @@
 }
 
 #primero .hero .imagen {
-  width: 100%;
+  width: 90%;
   min-height: 450px;
   background-color: var(--rojoMain);
   display: grid;
   place-items: center;
-  border-top-left-radius: 30%;
-  border-top-right-radius: 50%;
-  border-bottom-right-radius: 20%;
-  border-bottom-left-radius: 40%;
+  border-radius: 33% 67% 32% 68% / 32% 37% 43% 42%;
+
+  margin-top: 30px;
 }
 #primero .hero .imagen img {
-  width: 90%;
-  height: 90%;
-  border-top-left-radius: 30%;
-  border-top-right-radius: 50%;
-  border-bottom-right-radius: 20%;
-  border-bottom-left-radius: 40%;
+  width: 100%;
+  height: 100%;
+  border-radius: 33% 67% 32% 68% / 32% 37% 43% 42%;
 }
 #primero .hero .informacion {
   height: 45%;
@@ -141,6 +137,10 @@
   font-size: 2.1rem;
   color: var(--rojoMain);
   font-weight: 700;
+}
+#primero .hero .informacion .texto h2 .grande {
+}
+#primero .hero .informacion .texto h2 .vacio {
 }
 #primero .hero .informacion .texto p {
   font-size: 1.5rem;
@@ -179,6 +179,7 @@
   width: 45%;
   font-size: 1.4rem;
   font-weight: 700;
+  transition: 0.3s ease-out;
 }
 #primero .hero .informacion .botones button a {
   text-decoration: none;
@@ -650,17 +651,19 @@ footer .links ul li a:hover {
     flex-direction: row-reverse;
     width: 90%;
   }
+
   #primero .hero .imagen {
-    width: 700px;
+    width: 750px;
     height: 650px;
-    border-radius: 65% 34% 40% 60% / 30% 43% 47% 55%;
+    margin: 0;
+    border-radius: 33% 67% 32% 68% / 58% 39% 61% 42%;
   }
   #primero .hero .imagen img {
-    border-radius: 65% 34% 40% 60% / 30% 43% 47% 55%;
+    border-radius: 33% 67% 32% 68% / 58% 39% 61% 42%;
   }
   #primero .hero .informacion {
-    height: 490px;
-    width: 40%;
+    height: 55%;
+    width: 50%;
     align-items: flex-start;
   }
   #primero .hero .informacion .texto {
@@ -677,6 +680,15 @@ footer .links ul li a:hover {
   #primero .hero .informacion .texto h2 {
     letter-spacing: 3px;
     font-size: 2.5rem;
+  }
+  #primero .hero .informacion .texto h2 .grande {
+    font-size: 4rem;
+  }
+  #primero .hero .informacion .texto h2 .vacio {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--rojoMain);
+    font-size: 3rem;
+    width: 100%;
   }
   #primero .hero .informacion .texto p {
     font-size: 1.8rem;
