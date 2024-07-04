@@ -940,6 +940,7 @@ footer .links ul li a:hover {
   }
   #proyectos #projects .card .botones a {
     height: 100%;
+    width: 25%;
   }
   #proyectos #projects .card .botones a img {
     height: 100%;
